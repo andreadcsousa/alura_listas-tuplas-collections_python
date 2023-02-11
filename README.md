@@ -2,14 +2,14 @@
 
 Abordagem de lista, tupla, existência das arrays como tipos dentro do Python e das arrays do numpy.
 
-1. [Listas e operações]()
-2. [Tuplas]()
-3. [Polimorfismo e arrays]()
-4. [Igualdade]()
-5. [Outros builtins]()
-6. [Ordem natural]()
-7. [Ordenação customizada]()
-8. [Ordenação total]()
+1. [Listas e operações](#1-listas-e-operações)
+2. [Tuplas](#2-tuplas)
+3. [Polimorfismo e arrays](#3-polimorfismo-e-arrays)
+4. [Igualdade](#4-igualdade)
+5. [Outros builtins](#5-outros-builtins)
+6. [Ordem natural](#6-ordem-natural)
+7. [Ordenação customizada](#7-ordenação-customizada)
+8. [Ordenação total](#8-ordenação-total)
 
 Saiba mais sobre o curso [aqui](https://cursos.alura.com.br/course/python-collections-listas-e-tuplas) ou acompanhe minhas anotações abaixo. ⬇️
 
@@ -78,12 +78,12 @@ for elemento in idades:
 Para resolver a questão da inserção de itens na lista, sem que eles retornem outra lista dentro da anterior, usa-se a função `.extend()`. No caso de querer criar uma lista a partir de outra, cria-se uma lista vazia, depois utiliza-se a função `.append()` para adicionar mais itens, por exemplo:
 
 ```py
-idades.extend([27, 19])                     # retorna [20, 39, 18, 27, 19]
+idades.extend([27, 19])       # retorna [20, 39, 18, 27, 19]
 
 idades = [20, 39, 18, 27, 19]
 idades_no_ano_que_vem = []
 
-for idade in idades:                        # retorna [21, 40, 19, 28, 20] na lista "idades_no_ano_que_vem"
+for idade in idades:          # retorna [21, 40, 19, 28, 20] na lista "idades_no_ano_que_vem"
     idades_no_ano_que_vem.append(idade + 1)
 idades_no_ano_que_vem
 
@@ -364,11 +364,11 @@ for conta in contas:
 Array é um módulo utilizado para trabalhar com mais eficácia com números. Isso quer dizer que o `array` pode armazenar mais de um item ao mesmo tempo. Funciona como uma coleção ordenada de elementos e cada valor representa valores básicos, tais: caracteres `str`, inteiros `int`, números de ponto flutuante `float`. É como uma lista, porém mais restrito, pois é especificado um `type code` na criação do objeto:
 
 - `'b'` tipo int                        - `'B'` tipo int
-- `'u'` tipo caractere unicode          - `'h'` tipo int
-- `'H'` tipo int                        - `'i'` tipo int
-- `'I'` tipo int                        - `'l'` tipo int
-- `'L'` tipo int                        - `'q'` tipo int
-- `'Q'` tipo int                        - `'f'` tipo float
+- `'h'` tipo int                        - `'H'` tipo int
+- `'i'` tipo int                        - `'I'` tipo int
+- `'l'` tipo int                        - `'L'` tipo int
+- `'q'` tipo int                        - `'Q'` tipo int
+- `'f'` tipo float                      - `'u'` tipo caractere unicode
 - `'d'` tipo double
 
 > Para o dia-a-dia usual do Python utiliza-se as listas. Em situações específicas em que se tem um conjunto bem pequeno de elementos, onde cada posição indica uma coisa é comum usar as tuplas. E onde costuma ser importante um alto desempenho de funções matemáticas com Python é muito comum utilizar uma biblioteca, chamada Numpy.
